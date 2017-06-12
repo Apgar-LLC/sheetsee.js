@@ -19,58 +19,21 @@
     .tHeader {padding: 8px; cursor: pointer; text-align: left;}
   </style>
   <body>
-    <div class="container">
-      <h1>All Pennies</h1>
-      <p><em><a href="https://docs.google.com/a/github.com/spreadsheet/ccc?key=0Ao5u1U6KYND7dGN5QngweVJUWE16bTRob0d2a3dCbnc&usp=drive_web#gid=0" target="_blank">spreadsheet</a></em><p>
-      <input id="fullTableFilter" type="text" placeholder="filter by.."></input>
-      <a class="clear">Clear</a>
-      <div id="fullTable">Loading...</div>
-      <p><em><a onClick='window.location="view-source:" + window.location.href'>View Source</a> // <a href="../docs/sheetsee-tables.html">View Documentation</a></em></p>
+    <div id="traxtable">
+    <h1>TRAX 1706-1601</h1></div>
 
-      <footer>
-        <h4 id="getting-started">Getting Started</h4>
-        <ul>
-          <li><a href="../docs/about.html">About Sheetsee</a></li>
-          <li><a href="../docs/building.html">Building Sheetsee</a></li>
-          <li><a href="../docs/basics.html">Basics</a></li>
-        </ul>
-        <h4 id="ideas">Ideas</h4>
-        <ul>
-          <li><a href="../docs/templates.html">Templates</a></li>
-          <li><a href="../docs/tips.html">Tips!</a></li>
-        </ul>
-        <h4>Demos</h4>
-        <ul>
-          <li><a href="./demo-table.html">Table Demo</a></li>
-          <li><a href="./demo-map.html">Map Demo</a></li>
-        </ul>
-        <h4 id="use">Use</h4>
-        <ul>
-          <li><a href="../docs/sheetsee-core.html">Sheetsee-core</a></li>
-          <li><a href="../docs/sheetsee-tables.html">Sheetsee-tables</a></li>
-          <li><a href="../docs/sheetsee-maps.html">Sheetsee-maps</a></li>
-        </ul>
-        <h4 id="use">Contact</h4>
-        <ul>
-          <li><a href="http://www.twitter.com/jllord">@jllord</a></li>
-          <li><a href="https://github.com/jlord/sheetsee.js/issues/new">File an issue</a></li>
-        </ul>
-        <h4><a class="home-link" href="../index.html">Home</a></h4>
-      </footer>
-    </div>
-
-    <script id="fullTable_template" type="text/html">
+    <script id="traxtable_template" type="text/html">
       <table>
-        <tr><th class="tHeader">City</th><th class="tHeader">Place Name</th><th class="tHeader">Year</th><th class="tHeader">Image</th></tr>
+        <tr><th class="tHeader">TXN Type</th><th class="tHeader">CATEGORY</th><th class="tHeader">DATE</th><th class="tHeader">VEND</th><th class="tHeader">AMT</th><th class="tHeader">TAGS</th><th class="tHeader">ACCOUNT</th><th class="tHeader">Year</th><th class="tHeader">Month</th><th class="tHeader">Day</th></tr>
           {{#rows}}
-            <tr><td>{{City}}</td><td>{{PlaceName}}</td><td>{{Year}}</td><td>{{Image}}</td></tr>
+            <tr><td>{{TXN Type}}</td><td>{{CATEGORY}}</td><td>{{DATE}}</td><td>{{VEND}}</td><td>{{AMT}}</td><td>{{TAGS}}</td><td>{{ACCOUNT}}</td><td>{{Year}}</td><td>{{Month}}</td><td>{{Day}}</td></tr>
           {{/rows}}
       </table>
     </script>
 
     <script type="text/javascript">
       document.addEventListener('DOMContentLoaded', function() {
-        var URL = "0Ao5u1U6KYND7dGN5QngweVJUWE16bTRob0d2a3dCbnc"
+        var URL = "1igdYkAeUW7goWfRWl_Ds-rn5y2e0Pbc3P7-NxtUiwDU"
         Tabletop.init({key: URL, callback: showInfo, simpleSheet: true})
       })
 
@@ -78,8 +41,8 @@
         var tableOptions = {
           "data": data,
           "pagination": 10,
-          "tableDiv": "#fullTable",
-          "filterDiv": "#fullTableFilter"
+          "tableDiv": "#traxtable",
+          "filterDiv": "#traxtable"
         }
         Sheetsee.makeTable(tableOptions)
         Sheetsee.initiateTableFilter(tableOptions)
