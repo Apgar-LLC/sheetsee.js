@@ -20,8 +20,8 @@
   </style>
   <body>
     <div class="container">
-      <h1>All Pennies</h1>
-      <p><em><a href="https://docs.google.com/a/github.com/spreadsheet/ccc?key=0Ao5u1U6KYND7dGN5QngweVJUWE16bTRob0d2a3dCbnc&usp=drive_web#gid=0" target="_blank">spreadsheet</a></em><p>
+      <h1>TRAX 1706-1601</h1>
+      <p><em><a href="https://docs.google.com/spreadsheets/d/1igdYkAeUW7goWfRWl_Ds-rn5y2e0Pbc3P7-NxtUiwDU" target="_blank">spreadsheet</a></em><p>
       <input id="fullTableFilter" type="text" placeholder="filter by.."></input>
       <a class="clear">Clear</a>
       <div id="fullTable">Loading...</div>
@@ -52,8 +52,8 @@
         </ul>
         <h4 id="use">Contact</h4>
         <ul>
-          <li><a href="http://www.twitter.com/jllord">@jllord</a></li>
-          <li><a href="https://github.com/jlord/sheetsee.js/issues/new">File an issue</a></li>
+          <li><a href="http://www.twitter.com/apgario">@apgario</a></li>
+          <li><a href="">File an issue</a></li>
         </ul>
         <h4><a class="home-link" href="../index.html">Home</a></h4>
       </footer>
@@ -61,16 +61,16 @@
 
     <script id="fullTable_template" type="text/html">
       <table>
-        <tr><th class="tHeader">City</th><th class="tHeader">Place Name</th><th class="tHeader">Year</th><th class="tHeader">Image</th></tr>
+        <tr><th class="tHeader">City</th><th class="tHeader">Place Name</th><th class="tHeader">Year</th><th class="tHeader">Image</th><th class="tHeader">Image</th><th class="tHeader">Image</th><th class="tHeader">Image</th></tr>
           {{#rows}}
-            <tr><td>{{City}}</td><td>{{PlaceName}}</td><td>{{Year}}</td><td>{{Image}}</td></tr>
+            <tr><td>{{TXN Type}}</td><td>{{CATEGORY}}</td><td>{{DATE}}</td><td>{{VEND}}</td><td>{{AMT}}</td><td>{{TAGS}}</td><td>{{ACCOUNT}}</td><td>{{Year}}</td><td>{{Month}}</td><td>{{Day}}</td></tr>
           {{/rows}}
       </table>
     </script>
 
     <script type="text/javascript">
       document.addEventListener('DOMContentLoaded', function() {
-        var URL = "0Ao5u1U6KYND7dGN5QngweVJUWE16bTRob0d2a3dCbnc"
+        var URL = "https://docs.google.com/spreadsheets/d/1igdYkAeUW7goWfRWl_Ds-rn5y2e0Pbc3P7-NxtUiwDU"
         Tabletop.init({key: URL, callback: showInfo, simpleSheet: true})
       })
 
